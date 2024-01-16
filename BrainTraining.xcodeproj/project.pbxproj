@@ -67,7 +67,6 @@
 				145800E22B405F3A0077C2D5 /* SceneDelegate.swift */,
 				145800E42B405F3A0077C2D5 /* ViewController.swift */,
 				145800E62B405F3A0077C2D5 /* Main.storyboard */,
-				14FA5BD82B568A5C000DC340 /* HomeScreenSB.storyboard */,
 				145800E92B405F400077C2D5 /* Assets.xcassets */,
 			);
 			path = BrainTraining;
@@ -172,7 +171,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FA5BD92B568A5C000DC340 /* HomeScreenSB.storyboard in Resources */,
 				145800ED2B405F400077C2D5 /* LaunchScreen.storyboard in Resources */,
 				145800EA2B405F400077C2D5 /* Assets.xcassets in Resources */,
 				6AFAE7182B57201100264A9C /* About.storyboard in Resources */,
