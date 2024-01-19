@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Results-->
         <scene sceneID="cXX-9H-hwL">
             <objects>
-                <tableViewController storyboardIdentifier="ResultsSB" id="qRx-rT-klU" customClass="ResultsTableViewController" customModule="BrainTraining" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qRx-rT-klU" customClass="ResultsTableViewController" customModule="BrainTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lZb-5V-I5i">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="qRx-rT-klU" id="w42-1m-LOa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="eS4-Th-ygs"/>
+                    <navigationItem key="navigationItem" title="Results" largeTitleDisplayMode="always" id="eS4-Th-ygs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhn-Xm-bmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,7 +39,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lav-Y8-a9R">
             <objects>
-                <navigationController id="tja-52-rOB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ResultsSB" id="tja-52-rOB" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Ke-vc-b4M">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -50,7 +50,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gia-gZ-xlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-227" y="0.0"/>
+            <point key="canvasLocation" x="-129" y="0.0"/>
         </scene>
     </scenes>
     <resources>

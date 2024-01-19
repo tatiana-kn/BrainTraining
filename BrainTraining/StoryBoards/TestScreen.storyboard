@@ -139,7 +139,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pui-Vq-F1U">
-                                <rect key="frame" x="105" y="463.5" width="110" height="34.5"/>
+                                <rect key="frame" x="105" y="454.5" width="110" height="34.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="5h9-z2-utj"/>
                                 </constraints>
@@ -165,17 +165,38 @@
                             <constraint firstItem="Pui-Vq-F1U" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Bjx-if-KaX"/>
                             <constraint firstItem="kCZ-og-Eit" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="OxN-a9-LhK"/>
                             <constraint firstItem="FD9-fO-1hU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="PnE-aO-Ya7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Pui-Vq-F1U" secondAttribute="bottom" constant="70" id="cGr-00-e3X"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Pui-Vq-F1U" secondAttribute="bottom" constant="30" id="cGr-00-e3X"/>
                             <constraint firstItem="kCZ-og-Eit" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="myL-SJ-mZR"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rf6-Fe-jBo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="chart.line.uptrend.xyaxis" catalog="system" id="eXB-XG-pJa">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="qLS-Z2-05r" kind="show" id="Tfz-nm-V6g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41.25" y="-2.112676056338028"/>
+            <point key="canvasLocation" x="1038.75" y="-2.112676056338028"/>
+        </scene>
+        <!--ResultsSB-->
+        <scene sceneID="QJC-e1-6Zc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Results" referencedIdentifier="ResultsSB" id="qLS-Z2-05r" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="But-A2-vHc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bb6-4T-kmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723.125" y="10.56338028169014"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

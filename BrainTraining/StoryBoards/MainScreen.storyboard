@@ -32,7 +32,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="zb2-5g-kv0" kind="show" id="ZtG-e3-TRT"/>
+                                            <segue destination="zb2-5g-kv0" kind="show" id="8Ir-Xf-5aZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtQ-3c-GYy">
