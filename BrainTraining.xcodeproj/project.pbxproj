@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143A70C22B5A71AC003C1A9B /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143A70C12B5A71AC003C1A9B /* MainScreen.storyboard */; };
 		145800E12B405F3A0077C2D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145800E02B405F3A0077C2D5 /* AppDelegate.swift */; };
 		145800E32B405F3A0077C2D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145800E22B405F3A0077C2D5 /* SceneDelegate.swift */; };
 		145800E52B405F3A0077C2D5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145800E42B405F3A0077C2D5 /* AboutViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		143A70C12B5A71AC003C1A9B /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		145800DD2B405F3A0077C2D5 /* BrainTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		145800E02B405F3A0077C2D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		145800E22B405F3A0077C2D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				6AFAE7172B57201100264A9C /* About.storyboard */,
 				145800EB2B405F400077C2D5 /* LaunchScreen.storyboard */,
+				143A70C12B5A71AC003C1A9B /* MainScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				145800ED2B405F400077C2D5 /* LaunchScreen.storyboard in Resources */,
+				143A70C22B5A71AC003C1A9B /* MainScreen.storyboard in Resources */,
 				145800EA2B405F400077C2D5 /* Assets.xcassets in Resources */,
 				6AFAE7182B57201100264A9C /* About.storyboard in Resources */,
 			);
@@ -328,7 +332,7 @@
 				INFOPLIST_FILE = BrainTraining/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = About;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -359,7 +363,7 @@
 				INFOPLIST_FILE = BrainTraining/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = About;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
