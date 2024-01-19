@@ -8,22 +8,23 @@
 import UIKit
 
 final class TestScreenViewController: UIViewController {
-
+    
+    @IBOutlet var simpleStackView: UIStackView!
+    @IBOutlet var classicStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateUI()
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+private extension TestScreenViewController {
+    func updateUI() {
+        for stackView in [simpleStackView, classicStackView] {
+            stackView?.isHidden = true
+        }
     }
-    */
-
 }
