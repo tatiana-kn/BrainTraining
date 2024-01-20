@@ -9,22 +9,43 @@ import UIKit
 
 final class TestScreenViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet var simpleStackView: UIStackView!
     @IBOutlet var classicStackView: UIStackView!
     
+    // MARK: - Public Properties
+    var selectedMode: SelectedMode!
+    
+    enum SelectedMode {
+        case simple
+        case classic
+    }
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUI()
     }
-
-
 }
 
+// MARK: - UI Setup
 private extension TestScreenViewController {
     func updateUI() {
-        for stackView in [simpleStackView, classicStackView] {
-            stackView?.isHidden = true
+        
+        switch selectedMode {
+        case .simple:
+            simpleStackView.isHidden = false
+            classicStackView.isHidden = true
+        case .classic:
+            simpleStackView.isHidden = true
+            classicStackView.isHidden = false
+        default:
+            break
         }
     }
 }
+
+//        for stackView in [simpleStackView, classicStackView] {
+//            stackView?.isHidden = true
+//        }

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FD9-fO-1hU">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FD9-fO-1hU">
                                 <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0nV-ti-AoN">
@@ -461,10 +461,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FD9-fO-1hU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1qt-Jf-9nu"/>
                             <constraint firstItem="Qqr-4V-SGc" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="57p-zc-HOY"/>
                             <constraint firstItem="Qqr-4V-SGc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9Rd-tM-0YB"/>
                             <constraint firstItem="Pui-Vq-F1U" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Bjx-if-KaX"/>
                             <constraint firstItem="kCZ-og-Eit" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="OxN-a9-LhK"/>
+                            <constraint firstItem="FD9-fO-1hU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Q8d-1k-p4v"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Pui-Vq-F1U" secondAttribute="bottom" constant="30" id="cGr-00-e3X"/>
                             <constraint firstItem="Qqr-4V-SGc" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="kEB-Us-9pU"/>
                             <constraint firstItem="kCZ-og-Eit" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="myL-SJ-mZR"/>
