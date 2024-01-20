@@ -20,8 +20,6 @@ final class TestScreenViewController: UIViewController {
     
     @IBOutlet var playBtn: UIButton!
     
-    @IBOutlet var timerLabel: UILabel!
-    
     // MARK: - Public Properties
     var selectedMode: SelectedMode!
     
@@ -30,11 +28,6 @@ final class TestScreenViewController: UIViewController {
         case classic
         case difficult
     }
-    
-    // MARK: - Private Properties
-      private var timer: Timer?
-      private var seconds: Int = 0
-
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -57,16 +50,13 @@ final class TestScreenViewController: UIViewController {
             }
             
             playBtn.setTitle("Restart", for: .normal)
-            startTimer()
-
         } else {
             setEmptyValues(for: simpleModeButtons)
             setEmptyValues(for: classicModeButtons)
             setEmptyValues(for: difficultModeButtons)
             playBtn.setTitle("Play", for: .normal)
-            resetTimer()
-
         }
+        
     }
     
     
@@ -131,28 +121,6 @@ private extension TestScreenViewController {
             
         }
     }
-    
-    func startTimer() {
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
-                self?.updateTimerLabel()
-            })
-            RunLoop.current.add(timer!, forMode: .common)
-        }
-        
-     func resetTimer() {
-            timer?.invalidate()
-            timer = nil
-            seconds = 0
-            updateTimerLabel()
-        }
-        
-      func updateTimerLabel() {
-            let minutes = seconds / 60
-            let seconds = seconds % 60
-            timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
-            self.seconds += 1
-        }
-
 }
 
 //        for stackView in [simpleStackView, classicStackView] {

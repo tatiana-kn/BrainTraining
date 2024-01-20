@@ -181,8 +181,8 @@
                                     <action selector="playButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fLu-ya-sVp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCZ-og-Eit">
-                                <rect key="frame" x="133.5" y="70" width="53.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCZ-og-Eit">
+                                <rect key="frame" x="140" y="70" width="40" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1692,7 +1692,6 @@
                         <outlet property="difficultStackView" destination="vU4-zB-E5a" id="7tI-t6-BtR"/>
                         <outlet property="playBtn" destination="Pui-Vq-F1U" id="4yl-JN-OOh"/>
                         <outlet property="simpleStackView" destination="FD9-fO-1hU" id="N8Y-q2-d1G"/>
-                        <outlet property="timerLabel" destination="kCZ-og-Eit" id="8IM-vI-AyA"/>
                         <outletCollection property="simpleModeButtons" destination="ZWb-Fo-fcp" collectionClass="NSMutableArray" id="9dA-cC-PJo"/>
                         <outletCollection property="simpleModeButtons" destination="Sfh-DP-oKx" collectionClass="NSMutableArray" id="cEq-py-jip"/>
                         <outletCollection property="simpleModeButtons" destination="F1Y-8q-aAu" collectionClass="NSMutableArray" id="fmL-CE-v7F"/>
