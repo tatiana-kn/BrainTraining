@@ -34,24 +34,38 @@ final class TestScreenViewController: UIViewController {
         super.viewDidLoad()
         
         updateUI()
-        setValues(for: simpleModeButtons)
-        setValues(for: classicModeButtons)
-        setValues(for: difficultModeButtons)
     }
     
     @IBAction func playButton() {
-        switch selectedMode {
-        case .simple:
-            simpleStackView.isHidden = false
-        case .classic:
-            classicStackView.isHidden = false
-        default:
-            difficultStackView.isHidden = false
-            setFont(for: difficultModeButtons)
+        
+        if(playBtn.titleLabel?.text == "Play") {
+            switch selectedMode {
+            case .simple:
+                setValues(for: simpleModeButtons)
+            case .classic:
+                setValues(for: classicModeButtons)
+            default:
+                setPadding(for: difficultModeButtons)
+                setValues(for: difficultModeButtons)
+            }
+            
+            playBtn.setTitle("Restart", for: .normal)
+        } else {
+            setEmptyValues(for: simpleModeButtons)
+            setEmptyValues(for: classicModeButtons)
+            setEmptyValues(for: difficultModeButtons)
+            playBtn.setTitle("Play", for: .normal)
         }
         
-        playBtn.setTitle("Restart", for: .normal)
     }
+    
+    
+    @IBAction func numberButton(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          print(buttonTitle)
+        }
+    }
+    
 }
 
 // MARK: - UI Setup
@@ -60,6 +74,24 @@ private extension TestScreenViewController {
         simpleStackView.isHidden = true
         classicStackView.isHidden = true
         difficultStackView.isHidden = true
+                
+        switch selectedMode {
+        case .simple:
+            simpleStackView.isHidden = false
+            setEmptyValues(for: simpleModeButtons)
+        case .classic:
+            classicStackView.isHidden = false
+            setEmptyValues(for: classicModeButtons)
+        default:
+            difficultStackView.isHidden = false
+            setEmptyValues(for: difficultModeButtons)
+        }
+    }
+    
+    func setEmptyValues(for mode: [UIButton]) {
+        for button in mode {
+            button.setTitle("", for: .normal)
+        }
     }
     
     func setValues(for mode: [UIButton]) {
@@ -79,7 +111,7 @@ private extension TestScreenViewController {
         }
     }
     
-    func setFont(for mode: [UIButton]) {
+    func setPadding(for mode: [UIButton]) {
         for button in mode {
             //button.titleLabel?.font = button.titleLabel?.font.withSize(12)
             
