@@ -29,6 +29,8 @@ final class TestScreenViewController: UIViewController {
         case difficult
     }
     
+    private var currentNum = 0
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,9 @@ final class TestScreenViewController: UIViewController {
     @IBAction func playButton() {
         
         if(playBtn.titleLabel?.text == "Play") {
+            
+            currentNum = 1
+            
             switch selectedMode {
             case .simple:
                 setValues(for: simpleModeButtons)
@@ -61,8 +66,26 @@ final class TestScreenViewController: UIViewController {
     
     
     @IBAction func numberButton(_ sender: UIButton) {
-        if let buttonTitle = sender.title(for: .normal) {
-          print(buttonTitle)
+        let buttonTitle = sender.title(for: .normal) ?? ""
+        
+        let maxNum: Int
+        
+        switch selectedMode {
+        case .simple:
+            maxNum = simpleModeButtons.count + 1
+        case .classic:
+            maxNum = classicModeButtons.count + 1
+        default:
+            maxNum = difficultModeButtons.count + 1
+        }
+        
+        if currentNum == Int(buttonTitle) {
+            sender.setTitleColor(.lightGray, for: .normal)
+            currentNum += 1
+        }
+        
+        if currentNum == maxNum {
+            showAlert(withTitle: "Success", andMessage: "Result")
         }
     }
     
@@ -70,7 +93,7 @@ final class TestScreenViewController: UIViewController {
 
 // MARK: - UI Setup
 private extension TestScreenViewController {
-    func updateUI() {
+    private func updateUI() {
         simpleStackView.isHidden = true
         classicStackView.isHidden = true
         difficultStackView.isHidden = true
@@ -88,13 +111,13 @@ private extension TestScreenViewController {
         }
     }
     
-    func setEmptyValues(for mode: [UIButton]) {
+    private func setEmptyValues(for mode: [UIButton]) {
         for button in mode {
             button.setTitle("", for: .normal)
         }
     }
     
-    func setValues(for mode: [UIButton]) {
+    private func setValues(for mode: [UIButton]) {
         
         var randomValues = Set<Int>()
         
@@ -111,7 +134,7 @@ private extension TestScreenViewController {
         }
     }
     
-    func setPadding(for mode: [UIButton]) {
+    private func setPadding(for mode: [UIButton]) {
         for button in mode {
             //button.titleLabel?.font = button.titleLabel?.font.withSize(12)
             
@@ -120,6 +143,19 @@ private extension TestScreenViewController {
             button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
             
         }
+    }
+    
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [self] _ in
+            setEmptyValues(for: simpleModeButtons)
+            setEmptyValues(for: classicModeButtons)
+            setEmptyValues(for: difficultModeButtons)
+            
+            playBtn.setTitle("Play", for: .normal)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
