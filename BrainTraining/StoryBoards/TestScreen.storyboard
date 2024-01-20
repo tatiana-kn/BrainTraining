@@ -150,6 +150,9 @@
                                         <color key="strokeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="B5a-pz-R3B"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCZ-og-Eit">
                                 <rect key="frame" x="140" y="70" width="40" height="24"/>
@@ -485,6 +488,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="classicStackView" destination="Qqr-4V-SGc" id="t9B-Ag-kHD"/>
+                        <outlet property="playBtn" destination="Pui-Vq-F1U" id="kp4-bB-IUT"/>
                         <outlet property="simpleStackView" destination="FD9-fO-1hU" id="N8Y-q2-d1G"/>
                         <outletCollection property="simpleModeButtons" destination="ZWb-Fo-fcp" collectionClass="NSMutableArray" id="9dA-cC-PJo"/>
                         <outletCollection property="simpleModeButtons" destination="Sfh-DP-oKx" collectionClass="NSMutableArray" id="cEq-py-jip"/>
@@ -495,6 +499,31 @@
                         <outletCollection property="simpleModeButtons" destination="3h6-DK-mha" collectionClass="NSMutableArray" id="oSU-HH-KrH"/>
                         <outletCollection property="simpleModeButtons" destination="tGY-Sf-UB5" collectionClass="NSMutableArray" id="6c1-v7-fRl"/>
                         <outletCollection property="simpleModeButtons" destination="rae-4L-MbQ" collectionClass="NSMutableArray" id="LVO-0P-x4E"/>
+                        <outletCollection property="classicModeButtons" destination="mxg-KM-xd3" collectionClass="NSMutableArray" id="7Xz-WC-1X1"/>
+                        <outletCollection property="classicModeButtons" destination="cIl-76-voU" collectionClass="NSMutableArray" id="1MJ-Hd-DT4"/>
+                        <outletCollection property="classicModeButtons" destination="rr9-eA-guI" collectionClass="NSMutableArray" id="859-Ca-j3N"/>
+                        <outletCollection property="classicModeButtons" destination="2m5-Qi-M7V" collectionClass="NSMutableArray" id="mPv-rx-UdS"/>
+                        <outletCollection property="classicModeButtons" destination="zS9-6d-aUw" collectionClass="NSMutableArray" id="wTT-tb-Q8w"/>
+                        <outletCollection property="classicModeButtons" destination="Dub-SJ-ej0" collectionClass="NSMutableArray" id="6E7-rK-N25"/>
+                        <outletCollection property="classicModeButtons" destination="j9c-Ab-YYi" collectionClass="NSMutableArray" id="KHk-8h-PyB"/>
+                        <outletCollection property="classicModeButtons" destination="WlW-Em-Twh" collectionClass="NSMutableArray" id="hbz-nh-cBE"/>
+                        <outletCollection property="classicModeButtons" destination="x5e-BC-Wva" collectionClass="NSMutableArray" id="R7d-hA-JgX"/>
+                        <outletCollection property="classicModeButtons" destination="7IU-mo-b5o" collectionClass="NSMutableArray" id="Yo8-Mu-kFX"/>
+                        <outletCollection property="classicModeButtons" destination="8rd-v9-cKu" collectionClass="NSMutableArray" id="3Km-Wg-VRq"/>
+                        <outletCollection property="classicModeButtons" destination="m1o-EB-ybF" collectionClass="NSMutableArray" id="02R-6u-WWe"/>
+                        <outletCollection property="classicModeButtons" destination="mYk-xO-Jex" collectionClass="NSMutableArray" id="QVx-1B-bfP"/>
+                        <outletCollection property="classicModeButtons" destination="RhK-8R-BMd" collectionClass="NSMutableArray" id="PUX-fJ-Ujg"/>
+                        <outletCollection property="classicModeButtons" destination="1Gs-ql-9bU" collectionClass="NSMutableArray" id="UGh-Dc-L2r"/>
+                        <outletCollection property="classicModeButtons" destination="ig9-ZE-eTJ" collectionClass="NSMutableArray" id="qPL-aF-qQa"/>
+                        <outletCollection property="classicModeButtons" destination="Uqf-Ek-Nj3" collectionClass="NSMutableArray" id="spL-f3-7xZ"/>
+                        <outletCollection property="classicModeButtons" destination="1Vn-7S-3n6" collectionClass="NSMutableArray" id="MBu-5M-TRY"/>
+                        <outletCollection property="classicModeButtons" destination="K5g-8k-LI0" collectionClass="NSMutableArray" id="4yx-j2-7BA"/>
+                        <outletCollection property="classicModeButtons" destination="WCQ-sO-h9y" collectionClass="NSMutableArray" id="W1d-Zc-dN8"/>
+                        <outletCollection property="classicModeButtons" destination="NsD-dw-Ny5" collectionClass="NSMutableArray" id="Tf8-Sk-CjM"/>
+                        <outletCollection property="classicModeButtons" destination="L5e-iI-JDO" collectionClass="NSMutableArray" id="oNH-nA-r8Z"/>
+                        <outletCollection property="classicModeButtons" destination="nST-Vd-Q2W" collectionClass="NSMutableArray" id="VG3-24-Pk2"/>
+                        <outletCollection property="classicModeButtons" destination="NBX-GH-Pfx" collectionClass="NSMutableArray" id="okU-Jc-uSK"/>
+                        <outletCollection property="classicModeButtons" destination="8Pf-cw-NLn" collectionClass="NSMutableArray" id="Eyp-cC-0tm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

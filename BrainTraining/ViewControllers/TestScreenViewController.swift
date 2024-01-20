@@ -14,7 +14,9 @@ final class TestScreenViewController: UIViewController {
     @IBOutlet var classicStackView: UIStackView!
     
     @IBOutlet var simpleModeButtons: [UIButton]!
+    @IBOutlet var classicModeButtons: [UIButton]!
     
+    @IBOutlet var playBtn: UIButton!
     
     // MARK: - Public Properties
     var selectedMode: SelectedMode!
@@ -30,23 +32,28 @@ final class TestScreenViewController: UIViewController {
         
         updateUI()
         setValues(for: simpleModeButtons)
+        setValues(for: classicModeButtons)
+    }
+    
+    @IBAction func playButton() {
+        switch selectedMode {
+        case .simple:
+            simpleStackView.isHidden = false
+        case .classic:
+            classicStackView.isHidden = false
+        default:
+            break
+        }
+        
+        playBtn.setTitle("Restart", for: .normal)
     }
 }
 
 // MARK: - UI Setup
 private extension TestScreenViewController {
     func updateUI() {
-        
-        switch selectedMode {
-        case .simple:
-            simpleStackView.isHidden = false
-            classicStackView.isHidden = true
-        case .classic:
-            simpleStackView.isHidden = true
-            classicStackView.isHidden = false
-        default:
-            break
-        }
+        simpleStackView.isHidden = true
+        classicStackView.isHidden = true
     }
     
     func setValues(for mode: [UIButton]) {
@@ -58,7 +65,7 @@ private extension TestScreenViewController {
             randomValues.insert(randomNumber)
         }
         
-        for (index, button) in mode.enumerated() {
+        for (_, button) in mode.enumerated() {
             if let randomValue = randomValues.randomElement() {
                 randomValues.remove(randomValue)
                 button.setTitle("\(randomValue)", for: .normal)
