@@ -13,6 +13,9 @@ final class TestScreenViewController: UIViewController {
     @IBOutlet var simpleStackView: UIStackView!
     @IBOutlet var classicStackView: UIStackView!
     
+    @IBOutlet var simpleModeButtons: [UIButton]!
+    
+    
     // MARK: - Public Properties
     var selectedMode: SelectedMode!
     
@@ -26,6 +29,7 @@ final class TestScreenViewController: UIViewController {
         super.viewDidLoad()
         
         updateUI()
+        setValues(for: simpleModeButtons)
     }
 }
 
@@ -43,6 +47,24 @@ private extension TestScreenViewController {
         default:
             break
         }
+    }
+    
+    func setValues(for mode: [UIButton]) {
+        
+        var randomValues = Set<Int>()
+        
+        while randomValues.count < mode.count {
+            let randomNumber = Int.random(in: 1...mode.count)
+            randomValues.insert(randomNumber)
+        }
+        
+        for (index, button) in mode.enumerated() {
+            if let randomValue = randomValues.randomElement() {
+                randomValues.remove(randomValue)
+                button.setTitle("\(randomValue)", for: .normal)
+            }
+        }
+
     }
 }
 

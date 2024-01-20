@@ -486,6 +486,15 @@
                     <connections>
                         <outlet property="classicStackView" destination="Qqr-4V-SGc" id="t9B-Ag-kHD"/>
                         <outlet property="simpleStackView" destination="FD9-fO-1hU" id="N8Y-q2-d1G"/>
+                        <outletCollection property="simpleModeButtons" destination="ZWb-Fo-fcp" collectionClass="NSMutableArray" id="9dA-cC-PJo"/>
+                        <outletCollection property="simpleModeButtons" destination="Sfh-DP-oKx" collectionClass="NSMutableArray" id="cEq-py-jip"/>
+                        <outletCollection property="simpleModeButtons" destination="F1Y-8q-aAu" collectionClass="NSMutableArray" id="fmL-CE-v7F"/>
+                        <outletCollection property="simpleModeButtons" destination="jYx-my-Lyc" collectionClass="NSMutableArray" id="hN7-vf-Ph6"/>
+                        <outletCollection property="simpleModeButtons" destination="ZWn-Xb-W2A" collectionClass="NSMutableArray" id="UhB-5W-65n"/>
+                        <outletCollection property="simpleModeButtons" destination="wfo-oI-LYH" collectionClass="NSMutableArray" id="bgD-KU-ydv"/>
+                        <outletCollection property="simpleModeButtons" destination="3h6-DK-mha" collectionClass="NSMutableArray" id="oSU-HH-KrH"/>
+                        <outletCollection property="simpleModeButtons" destination="tGY-Sf-UB5" collectionClass="NSMutableArray" id="6c1-v7-fRl"/>
+                        <outletCollection property="simpleModeButtons" destination="rae-4L-MbQ" collectionClass="NSMutableArray" id="LVO-0P-x4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
