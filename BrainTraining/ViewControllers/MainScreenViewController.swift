@@ -23,6 +23,9 @@ final class MainScreenViewController: UIViewController {
             } else if segue.identifier == "classicShowSegue" {
                 guard let destination = segue.destination as? TestScreenViewController else { return }
                 destination.selectedMode = .classic
+            } else if segue.identifier == "difficultShowSegue" {
+                guard let destination = segue.destination as? TestScreenViewController else { return }
+                destination.selectedMode = .difficult
             }
         }
 }
