@@ -12,6 +12,7 @@ final class TestScreenViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var simpleStackView: UIStackView!
     @IBOutlet var classicStackView: UIStackView!
+    @IBOutlet var difficultStackView: UIStackView!
     
     // MARK: - Public Properties
     var selectedMode: SelectedMode!
@@ -19,6 +20,7 @@ final class TestScreenViewController: UIViewController {
     enum SelectedMode {
         case simple
         case classic
+        case difficult
     }
     
     // MARK: - View Life Cycle
@@ -37,11 +39,15 @@ private extension TestScreenViewController {
         case .simple:
             simpleStackView.isHidden = false
             classicStackView.isHidden = true
+            difficultStackView.isHidden = true
         case .classic:
             simpleStackView.isHidden = true
             classicStackView.isHidden = false
+            difficultStackView.isHidden = true
         default:
-            break
+            simpleStackView.isHidden = true
+            classicStackView.isHidden = true
+            difficultStackView.isHidden = false
         }
     }
 }

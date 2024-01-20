@@ -57,6 +57,9 @@
                                                 <color key="strokeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="zb2-5g-kv0" kind="show" identifier="difficultShowSegue" id="adu-oz-59H"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-jz-g17">
                                         <rect key="frame" x="0.0" y="163.5" width="190" height="34.5"/>
@@ -136,7 +139,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ir-Xf-5aZ"/>
+        <segue reference="adu-oz-59H"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
