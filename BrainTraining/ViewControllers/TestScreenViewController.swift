@@ -16,6 +16,7 @@ final class TestScreenViewController: UIViewController {
     
     @IBOutlet var simpleModeButtons: [UIButton]!
     @IBOutlet var classicModeButtons: [UIButton]!
+    @IBOutlet var difficultModeButtons: [UIButton]!
     
     @IBOutlet var playBtn: UIButton!
     
@@ -35,24 +36,18 @@ final class TestScreenViewController: UIViewController {
         updateUI()
         setValues(for: simpleModeButtons)
         setValues(for: classicModeButtons)
+        setValues(for: difficultModeButtons)
     }
     
     @IBAction func playButton() {
         switch selectedMode {
         case .simple:
             simpleStackView.isHidden = false
-<<<<<<< HEAD
-            classicStackView.isHidden = true
-            difficultStackView.isHidden = true
-=======
->>>>>>> sstawrNEW
         case .classic:
             classicStackView.isHidden = false
-            difficultStackView.isHidden = true
         default:
-            simpleStackView.isHidden = true
-            classicStackView.isHidden = true
             difficultStackView.isHidden = false
+            setFont(for: difficultModeButtons)
         }
         
         playBtn.setTitle("Restart", for: .normal)
@@ -64,6 +59,7 @@ private extension TestScreenViewController {
     func updateUI() {
         simpleStackView.isHidden = true
         classicStackView.isHidden = true
+        difficultStackView.isHidden = true
     }
     
     func setValues(for mode: [UIButton]) {
@@ -81,7 +77,17 @@ private extension TestScreenViewController {
                 button.setTitle("\(randomValue)", for: .normal)
             }
         }
-
+    }
+    
+    func setFont(for mode: [UIButton]) {
+        for button in mode {
+            //button.titleLabel?.font = button.titleLabel?.font.withSize(12)
+            
+            //var configuration = UIButton.Configuration.plain()
+            //configuration.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+            button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+            
+        }
     }
 }
 
