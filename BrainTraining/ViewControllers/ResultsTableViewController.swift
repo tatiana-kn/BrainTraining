@@ -26,9 +26,11 @@ final class ResultsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         let result = results[indexPath.row]
-        
+    
         content.text = "Date: \(result.getDate)"
         cell.contentConfiguration = content
+        
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }
