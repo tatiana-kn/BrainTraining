@@ -51,11 +51,14 @@ final class TestScreenViewController: UIViewController {
             switch selectedMode {
             case .simple:
                 setValues(for: simpleModeButtons)
+                setDefaultState(for: simpleModeButtons)
             case .classic:
                 setValues(for: classicModeButtons)
+                setDefaultState(for: classicModeButtons)
             default:
                 setPadding(for: difficultModeButtons)
                 setValues(for: difficultModeButtons)
+                setDefaultState(for: difficultModeButtons)
             }
             
             playBtn.setTitle("Restart", for: .normal)
@@ -77,14 +80,18 @@ final class TestScreenViewController: UIViewController {
         let buttonTitle = sender.title(for: .normal) ?? ""
         
         let maxNum: Int
+        let mode: String
         
         switch selectedMode {
         case .simple:
             maxNum = simpleModeButtons.count + 1
+            mode = "Simple"
         case .classic:
             maxNum = classicModeButtons.count + 1
+            mode = "Classic"
         default:
             maxNum = difficultModeButtons.count + 1
+            mode = "Difficult"
         }
         
         if currentNum == Int(buttonTitle) {
@@ -93,11 +100,15 @@ final class TestScreenViewController: UIViewController {
         }
         
         if currentNum == maxNum {
+            let time = timerLabel.text ?? ""
             showAlert(withTitle: "Success", andMessage: "Result: \(timerLabel.text ?? "")")
             timer?.invalidate()
 //            timer = nil
             resetTimer()
-
+            
+            let currentDate = Date()
+            
+            Result.addResult(date: currentDate, time: time, mode: mode)
         }
     }
     
@@ -157,6 +168,12 @@ private extension TestScreenViewController {
         }
     }
     
+    private func setDefaultState(for mode: [UIButton]) {
+        for button in mode {
+            button.setTitleColor(.black, for: .normal)
+        }
+    }
+    
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { [self] _ in
@@ -171,30 +188,30 @@ private extension TestScreenViewController {
     }
     
     private func startTimer() {
-               timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
-                   self?.updateTimerLabel()
-               })
-               RunLoop.current.add(timer!, forMode: .common)
-           }
+       timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
+           self?.updateTimerLabel()
+       })
+       RunLoop.current.add(timer!, forMode: .common)
+   }
            
     private func resetTimer() {
-               timer?.invalidate()
-               timer = nil
-               seconds = 0
-               updateTimerLabel()
-           }
+       timer?.invalidate()
+       timer = nil
+       seconds = 0
+       updateTimerLabel()
+   }
            
     private func updateTimerLabel() {
-               let minutes = seconds / 60
-               let seconds = seconds % 60
-               timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
-               self.seconds += 1
-           }
+       let minutes = seconds / 60
+       let seconds = seconds % 60
+       timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
+       self.seconds += 1
+   }
     
     private func stopTimer() {
-           timer?.invalidate()
-           timer = nil
-       }
+       timer?.invalidate()
+       timer = nil
+   }
 
 }
 
