@@ -141,7 +141,7 @@ private extension TestScreenViewController {
     
     private func setValues(for mode: [UIButton]) {
         
-        var randomValues = Set<Int>()
+        var randomValues: Set<Int> = []
         
         while randomValues.count < mode.count {
             let randomNumber = Int.random(in: 1...mode.count)
