@@ -9,6 +9,12 @@ import UIKit
 
 final class TestScreenViewController: UIViewController {
     
+    enum SelectedMode {
+        case simple
+        case classic
+        case difficult
+    }
+    
     // MARK: - IB Outlets
     @IBOutlet var simpleStackView: UIStackView!
     @IBOutlet var classicStackView: UIStackView!
@@ -24,12 +30,6 @@ final class TestScreenViewController: UIViewController {
     // MARK: - Public Properties
     var selectedMode: SelectedMode!
     
-    enum SelectedMode {
-        case simple
-        case classic
-        case difficult
-    }
-    
     // MARK: - Private Properties
     private var currentNum = 0
     private var timer: Timer?
@@ -42,6 +42,7 @@ final class TestScreenViewController: UIViewController {
         updateUI()
     }
     
+    // MARK: - IBActions
     @IBAction func playButton() {
         
         if(playBtn.titleLabel?.text == "Play") {
@@ -113,6 +114,7 @@ final class TestScreenViewController: UIViewController {
 
 // MARK: - UI Setup
 private extension TestScreenViewController {
+    
     private func updateUI() {
         simpleStackView.isHidden = true
         classicStackView.isHidden = true
@@ -184,6 +186,7 @@ private extension TestScreenViewController {
         present(alert, animated: true)
     }
     
+    // MARK: - Timer setup
     private func startTimer() {
        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
            self?.updateTimerLabel()
@@ -213,6 +216,3 @@ private extension TestScreenViewController {
 
 }
 
-//        for stackView in [simpleStackView, classicStackView] {
-//            stackView?.isHidden = true
-//        }

@@ -9,8 +9,10 @@ import UIKit
 
 final class ResultsTableViewController: UITableViewController {
     
+    // MARK: - Private Properties
     private let results = Result.getResults()
 
+    //MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
