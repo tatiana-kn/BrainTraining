@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -11,7 +11,7 @@
         <!--About View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="AboutViewController" customModule="BrainTraining" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutSB" id="Y6W-OH-hqX" customClass="AboutViewController" customModule="BrainTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,25 +22,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xY-FQ-qKm">
-                                <rect key="frame" x="16" y="132" width="361" height="162.33333333333337"/>
-                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="appInfo" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xY-FQ-qKm">
+                                <rect key="frame" x="16" y="132" width="361" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="creators" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiW-kM-2GP">
+                                <rect key="frame" x="16" y="177.33333333333334" width="361" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aiW-kM-2GP" firstAttribute="top" secondItem="1xY-FQ-qKm" secondAttribute="bottom" constant="25" id="0TA-kY-KCx"/>
                             <constraint firstAttribute="trailing" secondItem="1xY-FQ-qKm" secondAttribute="trailing" constant="16" id="A5S-Dl-ZVO"/>
                             <constraint firstItem="1xY-FQ-qKm" firstAttribute="top" secondItem="zYZ-NI-e1K" secondAttribute="bottom" constant="16" id="AzF-4p-k6X"/>
                             <constraint firstItem="zYZ-NI-e1K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="HQH-BT-L8k"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aiW-kM-2GP" secondAttribute="trailing" constant="16" id="LF2-EF-Vy7"/>
                             <constraint firstItem="zYZ-NI-e1K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Xh9-Z7-rR5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zYZ-NI-e1K" secondAttribute="trailing" constant="16" id="b2K-Uv-E8a"/>
+                            <constraint firstItem="aiW-kM-2GP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="sAp-yY-R9o"/>
                             <constraint firstItem="1xY-FQ-qKm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xdZ-RE-jwW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appInfoLabel" destination="1xY-FQ-qKm" id="TvW-ka-evd"/>
+                        <outlet property="creatorsLabel" destination="aiW-kM-2GP" id="cy1-rT-2VJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

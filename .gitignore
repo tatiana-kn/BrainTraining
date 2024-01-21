@@ -90,4 +90,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 **/.DS_Store
+.DS_Store
 BrainTraining.xcodeproj/project.xcworkspace/xcuserdata/stawr.xcuserdatad/UserInterfaceState.xcuserstate

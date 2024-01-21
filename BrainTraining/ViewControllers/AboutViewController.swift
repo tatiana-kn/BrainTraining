@@ -9,11 +9,19 @@ import UIKit
 
 final class AboutViewController: UIViewController {
 
+    // MARK: - IB Outlets
+    @IBOutlet var appInfoLabel: UILabel!
+    @IBOutlet var creatorsLabel: UILabel!
+    
+    // MARK: - Private Properties
+    private let appInfo = AppInfo.getAppInfo()
+
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        appInfoLabel.text = appInfo.description
+        creatorsLabel.text = appInfo.creators
     }
-
-
 }
 
