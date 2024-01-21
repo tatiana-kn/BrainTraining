@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1439CEBE2B5D38CB000C21C2 /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1439CEBD2B5D38CB000C21C2 /* AboutData.swift */; };
 		143A70C22B5A71AC003C1A9B /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143A70C12B5A71AC003C1A9B /* MainScreen.storyboard */; };
 		143A70C42B5AB068003C1A9B /* TestScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143A70C32B5AB068003C1A9B /* TestScreen.storyboard */; };
 		143A70C62B5AB24C003C1A9B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A70C52B5AB24C003C1A9B /* MainScreenViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1439CEBD2B5D38CB000C21C2 /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
 		143A70C12B5A71AC003C1A9B /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		143A70C32B5AB068003C1A9B /* TestScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestScreen.storyboard; sourceTree = "<group>"; };
 		143A70C52B5AB24C003C1A9B /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				6A403FB92B5C8C8C006A1E10 /* Result.swift */,
+				1439CEBD2B5D38CB000C21C2 /* AboutData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				143A70CC2B5AB392003C1A9B /* ResultsTableViewController.swift in Sources */,
+				1439CEBE2B5D38CB000C21C2 /* AboutData.swift in Sources */,
 				6A403FBE2B5C8E74006A1E10 /* DataStore.swift in Sources */,
 				145800E52B405F3A0077C2D5 /* AboutViewController.swift in Sources */,
 				143A70C82B5AB299003C1A9B /* TestScreenViewController.swift in Sources */,

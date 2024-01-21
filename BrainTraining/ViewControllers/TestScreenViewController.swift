@@ -72,9 +72,7 @@ final class TestScreenViewController: UIViewController {
             
             resetTimer()
         }
-        
     }
-    
     
     @IBAction func numberButton(_ sender: UIButton) {
         let buttonTitle = sender.title(for: .normal) ?? ""
@@ -103,7 +101,6 @@ final class TestScreenViewController: UIViewController {
             let time = timerLabel.text ?? ""
             showAlert(withTitle: "Success", andMessage: "Result: \(timerLabel.text ?? "")")
             timer?.invalidate()
-//            timer = nil
             resetTimer()
             
             let currentDate = Date()
@@ -193,6 +190,7 @@ private extension TestScreenViewController {
        })
        RunLoop.current.add(timer!, forMode: .common)
    }
+    
            
     private func resetTimer() {
        timer?.invalidate()

@@ -8,12 +8,6 @@
 import UIKit
 
 final class MainScreenViewController: UIViewController {
-
-    // MARK: - View Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     //MARK: - Overrides Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
