@@ -1731,7 +1731,6 @@
                         <outletCollection property="difficultModeButtons" destination="anQ-Cb-U0C" collectionClass="NSMutableArray" id="Eva-3y-ojG"/>
                         <outletCollection property="difficultModeButtons" destination="JsS-mm-eV0" collectionClass="NSMutableArray" id="SS1-PF-kBj"/>
                         <outletCollection property="difficultModeButtons" destination="RuX-7V-JXT" collectionClass="NSMutableArray" id="XXW-vK-xLU"/>
-                        <outletCollection property="difficultModeButtons" destination="RuX-7V-JXT" collectionClass="NSMutableArray" id="Nyf-jI-GE5"/>
                         <outletCollection property="difficultModeButtons" destination="U6I-I8-QBk" collectionClass="NSMutableArray" id="UrO-qh-Bc4"/>
                         <outletCollection property="difficultModeButtons" destination="YYW-sN-bX4" collectionClass="NSMutableArray" id="ijS-ls-him"/>
                         <outletCollection property="difficultModeButtons" destination="mpx-4N-UQ5" collectionClass="NSMutableArray" id="tIB-Tj-wjJ"/>
