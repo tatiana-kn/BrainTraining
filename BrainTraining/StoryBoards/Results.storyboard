@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="677" y="0.0"/>
         </scene>
-        <!--Result-->
+        <!--Result details-->
         <scene sceneID="GwX-Qh-sKi">
             <objects>
                 <viewController id="GTI-Ju-FKy" customClass="DetailResultViewController" customModule="BrainTraining" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,7 +123,7 @@
                             <constraint firstItem="p1E-bx-7ke" firstAttribute="trailing" secondItem="5wj-Os-ldn" secondAttribute="trailing" constant="16" id="wLe-rh-Rzd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Result" id="5Wl-PN-IFH"/>
+                    <navigationItem key="navigationItem" title="Result details" id="5Wl-PN-IFH"/>
                     <connections>
                         <outlet property="dateLabel" destination="rlT-nE-D7r" id="xcG-eC-2wG"/>
                         <outlet property="modeLabel" destination="Ttf-zp-sM0" id="Y1a-57-CPX"/>

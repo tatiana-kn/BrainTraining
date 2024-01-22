@@ -102,8 +102,7 @@ final class TestScreenViewController: UIViewController {
             let time = timerLabel.text ?? ""
             showAlert(withTitle: "Success", andMessage: "Result: \(timerLabel.text ?? "")")
             timer?.invalidate()
-            resetTimer()
-            
+                        
             let currentDate = Date()
             
             Result.addResult(date: currentDate, time: time, mode: mode)
@@ -114,8 +113,7 @@ final class TestScreenViewController: UIViewController {
 
 // MARK: - UI Setup
 private extension TestScreenViewController {
-    
-    private func updateUI() {
+    func updateUI() {
         simpleStackView.isHidden = true
         classicStackView.isHidden = true
         difficultStackView.isHidden = true
@@ -136,13 +134,23 @@ private extension TestScreenViewController {
         }
     }
     
-    private func setEmptyValues(for mode: [UIButton]) {
+    func setPadding(for mode: [UIButton]) {
+        for button in mode {
+            button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        }
+    }
+}
+
+// MARK: - Private Methods
+private extension TestScreenViewController {
+        
+    func setEmptyValues(for mode: [UIButton]) {
         for button in mode {
             button.setTitle("", for: .normal)
         }
     }
     
-    private func setValues(for mode: [UIButton]) {
+    func setValues(for mode: [UIButton]) {
         
         var randomValues: Set<Int> = []
         
@@ -159,58 +167,55 @@ private extension TestScreenViewController {
         }
     }
     
-    private func setPadding(for mode: [UIButton]) {
-        for button in mode {
-            button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-        }
-    }
-    
-    private func setDefaultState(for mode: [UIButton]) {
+    func setDefaultState(for mode: [UIButton]) {
         for button in mode {
             button.setTitleColor(.black, for: .normal)
         }
     }
     
-    private func showAlert(withTitle title: String, andMessage message: String) {
+    func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { [self] _ in
             setEmptyValues(for: simpleModeButtons)
             setEmptyValues(for: classicModeButtons)
             setEmptyValues(for: difficultModeButtons)
             
+            resetTimer()
+            
             playBtn.setTitle("Play", for: .normal)
         }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    // MARK: - Timer setup
-    private func startTimer() {
+}
+
+// MARK: - Timer setup
+private extension TestScreenViewController {
+    func startTimer() {
        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
            self?.updateTimerLabel()
        })
        RunLoop.current.add(timer!, forMode: .common)
-   }
+    }
     
            
-    private func resetTimer() {
+    func resetTimer() {
        timer?.invalidate()
        timer = nil
        seconds = 0
        updateTimerLabel()
-   }
+    }
            
-    private func updateTimerLabel() {
+    func updateTimerLabel() {
        let minutes = seconds / 60
        let seconds = seconds % 60
        timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
        self.seconds += 1
-   }
+    }
     
-    private func stopTimer() {
+    func stopTimer() {
        timer?.invalidate()
        timer = nil
-   }
-
+    }
 }
 
