@@ -124,12 +124,15 @@ private extension TestScreenViewController {
         case .simple:
             simpleStackView.isHidden = false
             setEmptyValues(for: simpleModeButtons)
+            title = "Simple Mode"
         case .classic:
             classicStackView.isHidden = false
             setEmptyValues(for: classicModeButtons)
+            title = "Classic Mode"
         default:
             difficultStackView.isHidden = false
             setEmptyValues(for: difficultModeButtons)
+            title = "Difficult Mode"
         }
     }
     
@@ -158,12 +161,7 @@ private extension TestScreenViewController {
     
     private func setPadding(for mode: [UIButton]) {
         for button in mode {
-            //button.titleLabel?.font = button.titleLabel?.font.withSize(12)
-            
-            //var configuration = UIButton.Configuration.plain()
-            //configuration.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
             button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-            
         }
     }
     

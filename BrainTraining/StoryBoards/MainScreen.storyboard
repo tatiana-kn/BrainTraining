@@ -77,19 +77,28 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schulte table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dma-qR-IjU">
-                                <rect key="frame" x="76" y="184" width="168.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="90" y="184.5" width="140.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BrainTraining" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k7-VN-0OZ">
+                                <rect key="frame" x="47" y="129" width="226" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="35"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dma-qR-IjU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="120" id="9Mo-BM-WVr"/>
+                            <constraint firstItem="1k7-VN-0OZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2Y2-Fo-D3a"/>
+                            <constraint firstItem="dma-qR-IjU" firstAttribute="top" secondItem="1k7-VN-0OZ" secondAttribute="bottom" constant="15" id="JK1-ss-bcn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wOz-sx-XQb" secondAttribute="bottom" constant="90" id="Jsh-ea-P0f"/>
                             <constraint firstItem="dma-qR-IjU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Nxo-zi-Hc8"/>
                             <constraint firstItem="wOz-sx-XQb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ViK-pa-xzl"/>
+                            <constraint firstItem="1k7-VN-0OZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="65" id="duW-pM-S5D"/>
+                            <constraint firstItem="1k7-VN-0OZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rMF-lT-x9z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7I3-HS-3HO"/>
