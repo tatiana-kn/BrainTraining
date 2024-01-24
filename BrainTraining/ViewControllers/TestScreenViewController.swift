@@ -94,7 +94,7 @@ final class TestScreenViewController: UIViewController {
         }
         
         if currentNum == Int(buttonTitle) {
-            sender.setTitleColor(.lightGray, for: .normal)
+            sender.setTitleColor(.systemGray3, for: .normal)
             currentNum += 1
         }
         
@@ -169,7 +169,7 @@ private extension TestScreenViewController {
     
     func setDefaultState(for mode: [UIButton]) {
         for button in mode {
-            button.setTitleColor(.black, for: .normal)
+            button.setTitleColor(.none, for: .normal)
         }
     }
     
