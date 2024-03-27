@@ -30,6 +30,7 @@ final class ResultsTableViewController: UITableViewController {
         let result = results[indexPath.row]
     
         content.text = "Date: \(result.getDate)"
+        content.textProperties.color = .customGrey
         cell.contentConfiguration = content
         
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
