@@ -15,3 +15,7 @@ The app includes a timer to track the time taken to complete the task, as well a
 ## Authors
 - [Tatyana Mastykova](https://github.com/tatiana-kn)
 - [Evgeni Glushko](https://github.com/sstawr)
+
+![Simulator Screen Recording - iPhone 15 Pro - 2024-03-28 at 10 45 44](https://github.com/tatiana-kn/BrainTraining/assets/123388284/aa062032-6b37-47f7-a86b-03bc98ca536f)
+
+
